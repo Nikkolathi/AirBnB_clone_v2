@@ -9,7 +9,7 @@ class FileStorage:
     __objects = {}
 
  
- def all(self, cls=None):
+    def all(self, cls=None):
         """Returns a dictionary of models currently in storage"""
         if cls is None:
             return FileStorage.__objects
@@ -19,10 +19,10 @@ class FileStorage:
                 my_dict[key] = val
         return my_dict
    
- def new(self, obj):
+    def new(self, obj):
         """Adds new object to storage dictionary"""
         self.all().update({obj.to_dict()['__class__'] + '.' + obj.id: obj})
- def save(self):
+    def save(self):
         """Saves storage dictionary to file"""
         with open(FileStorage.__file_path, 'w') as f:
             temp = {}
@@ -31,7 +31,7 @@ class FileStorage:
                 temp[key] = val.to_dict()
             json.dump(temp, f)
 
- def reload(self):
+    def reload(self):
         """Loads storage dictionary from file"""
         from models.base_model import BaseModel
         from models.user import User
@@ -54,7 +54,8 @@ class FileStorage:
                         self.all()[key] = classes[val['__class__']](**val)
         except FileNotFoundError:
             pass
-        def delete(self, obj=None):
+   
+    def delete(self, obj=None):
         """public instance method to delete obj from __objects
         if it’s inside
         """
