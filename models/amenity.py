@@ -2,8 +2,8 @@
 """ 0x02. AirBnB clone - MySQL, task 10. DBStorage - Amenity... and BOOM! """
 from sqlalchemy import Column, String
 from sqlalchemy.orm import relationship
-from base_model import BaseModel, Base
-from place import place_amenity
+from models.base_model import BaseModel, Base
+# from models.place import place_amenity
 
 
 class Amenity(BaseModel, Base):
@@ -16,5 +16,5 @@ class Amenity(BaseModel, Base):
     """
     __tablename__ = 'amenities'
     name = Column(String(128), nullable=False)
-    place_amenities = relationship('Place', secondary=place_amenity)
+#    place_amenities = relationship('Place', secondary=place_amenity)
 
