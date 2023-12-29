@@ -1,8 +1,11 @@
 #!/usr/bin/python3
 """Starts Flask web app
-Routes: / - display "Hello HBNB!"/hbnb - display "HBNB"
-    /c/<text> - display "C <text>"
-    /python/<text> - display "Python is cool"
+Routes:
+ / - display "Hello HBNB!"
+ /hbnb - display "HBNB"
+ /c/<text> - display
+ /"C <text>"
+ /python/<text> - display "Python is cool"
 """
 from flask import Flask
 
@@ -37,4 +40,4 @@ def python_text(text="is cool"):
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0")
+    app.run(host="0.0.0.0", port=5000)

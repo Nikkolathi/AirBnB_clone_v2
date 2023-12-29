@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 """Starts Flask web app
-Routes:/ - display "Hello HBNB!"/hbnb - display "HBNB"
-    /c/<text> - display "C <text>"
-    /python/<text> - display "Python is cool"
-    /number/<n> - display n if integer
+Routes:/ - display "Hello HBNB!"
+/hbnb - display "HBNB"
+/c/<text> - display "C <text>" 
+/python/<text> - display "Python is cool" 
+/number/<n> - display n if integer
 """
 from flask import Flask
 
@@ -44,4 +45,4 @@ def number_n(n):
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0")
+    app.run(host="0.0.0.0",port=5000)

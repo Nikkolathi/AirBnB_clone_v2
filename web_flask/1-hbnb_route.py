@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Starts Flask web app
-Routes:/ - display "Hello HBNB!"/hbnb - display "HBNB"
+Routes:/ - display "Hello HBNB!"
+/hbnb - display "HBNB"
 """
 from flask import Flask
 
@@ -20,4 +21,4 @@ def hbnb():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0")
+    app.run(host="0.0.0.0", port=5000)

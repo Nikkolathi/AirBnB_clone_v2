@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """Starts Flask web app
-Routes: / - display "Hello HBNB!"    /hbnb - display "HBNB"
-    /c/<text> - display "C <text>"
+Routes: / - display "Hello HBNB!"  
+  /hbnb - display "HBNB"
+  /c/<text> - display "C <text>"
 """
 from flask import Flask
 
@@ -28,4 +29,4 @@ def c_text(text):
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0")
+    app.run(host="0.0.0.0", port=5000)
